@@ -125,7 +125,7 @@ for (var i = 0; i < SubwayCitiesList.length; i++) {
     $(`<option value="${citycode}">${name}</option>`).appendTo("select")
 }
 $("select").on("change", function() {
-    window.location.href = "/s/subway/index.html?cityCode=" + $(this).val()
+    window.location.href = window.location.href.split("?")[0] + "?cityCode=" + $(this).val()
 })
 var cityCode = $.getUrlQuery("cityCode") || 131
 $("select").val(cityCode)
