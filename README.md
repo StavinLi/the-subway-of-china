@@ -5,7 +5,11 @@
 ###  项目介绍
 中国地铁图，支持多种浏览器。覆盖北上广多个城市。
 - 技术点
-    1. svg绘制。
-    2. 调用svg-pan-zoom.js以及hammer.js缩放 。
+    1. svg绘制
+    2. 调用svg-pan-zoom.js以及hammer.js缩放
 - 数据来源
-    1.百度地图
+    1. 百度地图
+
+
+### 页面预览
+- [在线预览demo](https://yichen1203.github.io/the-subway-of-china/index.html) https://yichen1203.github.io/the-subway-of-china/index.html 点个赞吧！
