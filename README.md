@@ -9,3 +9,7 @@
     2. 调用svg-pan-zoom.js以及hammer.js缩放 。
 - 数据来源
     1.百度地图
+
+
+### 页面预览
+- [demo](https://yichen1203.github.io/the-subway-of-china/index.html) https://yichen1203.github.io/the-subway-of-china/index.html 点个赞吧！
