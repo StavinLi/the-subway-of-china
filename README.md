@@ -12,4 +12,4 @@
 
 
 ### 页面预览
-- [在线预览demo](https://yichen1203.github.io/the-subway-of-china/index.html) https://yichen1203.github.io/the-subway-of-china/index.html 点个赞吧！
+- [在线预览](https://stavinli.github.io/the-subway-of-china/index.html) 点个赞吧！
