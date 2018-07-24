@@ -7,10 +7,12 @@ var gulp = require('gulp'),
     stripDebug = require('gulp-strip-debug'), //去console.log
     htmlmin = require('gulp-htmlmin'), //压缩html
     base64 = require('gulp-base64'),
+    sourcemaps = require('gulp-sourcemaps'), // 来源地图
     rev = require('gulp-rev'),
     revCollector = require('gulp-rev-collector');
 gulp.task('css', function() {
     return gulp.src('src/css/*.css')
+        .pipe(sourcemaps.init())
         .pipe(autoprefixer({
             browsers: ['last 4 versions'],
         }))
@@ -29,6 +31,7 @@ gulp.task('css', function() {
         }, function(details) {
             console.log(details.name + ': 原始-' + details.stats.originalSize + ',压缩后-' + details.stats.minifiedSize);
         }))
+        .pipe(sourcemaps.write('_srcmap'))
         .pipe(rev())
         .pipe(gulp.dest('dest/css'))
         .pipe(rev.manifest())
@@ -37,6 +40,7 @@ gulp.task('css', function() {
 
 gulp.task('js', function() {
     return gulp.src('src/js/*.js')
+        .pipe(sourcemaps.init())
         .pipe(babel({
             presets: ['es2015']
         }))
@@ -45,6 +49,7 @@ gulp.task('js', function() {
             compress: true //类型：Boolean 默认：true 是否完全压缩
         }))
         .pipe(stripDebug())
+        .pipe(sourcemaps.write('_srcmap'))
         .pipe(rev())
         .pipe(gulp.dest('dest/js'))
         .pipe(rev.manifest())

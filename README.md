@@ -52,6 +52,7 @@
 ```
     -  解决cnpm install 后node_modules包无法push，改用npm install
     -  更改依赖配置，新增版本号?v=
+    -  新增gulp-sourcemaps地图
 ```
 
     
