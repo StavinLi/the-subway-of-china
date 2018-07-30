@@ -54,6 +54,13 @@
     -  更改依赖配置，新增版本号?v=
     -  新增gulp-sourcemaps地图
 ```
-
+#### 2018.7.30
+```
+    -  indexOf()==-1替换为includes()：返回布尔值，表示是否找到了参数字符串。
+```
     
- 
+### 项目总结
+ * 1.stroke color -->加“#”
+ * 2.svg image标签路径赋值 -->image[0].href.baseVal = ;
+ * 3.pc微信内置浏览器不显示-->es6兼容
+ * 4.中转站存在text内容及image相同重叠问题 -->repeatStr.includs(uid)
