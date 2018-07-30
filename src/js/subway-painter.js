@@ -64,7 +64,7 @@ function subwayPainter(l) {
             var { x, y, rx, ry, lb, ex, rc, st, uid } = p[j].p_xmlattr
             if (st) {
                 if (ex) {
-                    if (repeatStr.indexOf(uid) == -1) {
+                    if (!repeatStr.includes(uid)) {
                         var image = $.svg('image').appendTo('#g-box')
                         image.attr({
                             width: "20",
@@ -83,7 +83,7 @@ function subwayPainter(l) {
                         ry: "6.5"
                     }).css("stroke", "#" + l_xmlattr.lc.split("x")[1]);
                 }
-                if (repeatStr.indexOf(uid) == -1) {
+                if (!repeatStr.includes(uid)) {
                     var text = $.svg('text').appendTo('#g-box').html(lb).addSvgClass("station-name")
                     text.attr({
                         x: x + rx + 2,
@@ -108,6 +108,6 @@ function subwayPainter(l) {
  * 1.stroke color -->加“#”
  * 2.svg image标签路径赋值 -->image[0].href.baseVal = ;
  * 3.pc微信内置浏览器不显示-->es6兼容
- * 4.中转站存在text内容及image相同重叠问题 -->repeatStr.indexOf(uid)
+ * 4.中转站存在text内容及image相同重叠问题 -->repeatStr.includs(uid)
  * 
  */
