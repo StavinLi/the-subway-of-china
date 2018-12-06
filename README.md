@@ -58,6 +58,13 @@
 ```
     -  indexOf()==-1替换为includes()：返回布尔值，表示是否找到了参数字符串。
 ```
+#### 2018.12.06
+```
+    -  修复香港地区地铁图无法显示问题
+    -  字体类型Helvetica, Arial, sans-serif-->黑体
+    -  标签替换ellipse-->circle 
+    -  样式stroke-width调整： path 4 --> 5 ; cicle 2.5 --> 1
+```
     
 ### 项目总结
  * 1.stroke color -->加“#”

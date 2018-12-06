@@ -16,18 +16,18 @@ svg {
     text-rendering: geometricPrecision;
 }
 
-ellipse {
+circle {
     fill: white;
-    stroke-width: 2.5;
+    stroke-width: 1;
 }
 
 path {
     fill: none;
-    stroke-width: 4;
+    stroke-width: 5;
 }
 
 text {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 黑体;
     text-anchor: start;
 }
 

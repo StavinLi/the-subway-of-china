@@ -9,13 +9,15 @@
 //     script.onload = function() { eruda.init() }
 // })();
 function subwayPainter(l) {
-    //地铁线路
+    console.log(l)
+        //地铁线路
     for (var i = 0; i < l.length; i++) {
+        console.log(i)
         var { l_xmlattr, p } = l[i]
         var { lb, loop, uid } = l_xmlattr
-        if (!uid) { //暂未开通
-            break;
-        }
+        // if (!uid) { //暂未开通
+        //     break;
+        // }
         var dStr = ""; //地铁线路点
         var isLb = false; //是否圆润拐点
         for (var j = 0; j < p.length; j++) {
@@ -41,6 +43,7 @@ function subwayPainter(l) {
                 }
             }
         }
+
         var { lb, lc, lbx, lby } = l_xmlattr
         var path = $.svg('path').appendTo('#g-box')
         path.attr({
@@ -57,9 +60,9 @@ function subwayPainter(l) {
     var repeatStr = "" //uid字符串判断重复点
     for (var i = 0; i < l.length; i++) {
         var { l_xmlattr, p } = l[i]
-        if (!l_xmlattr.uid) { //暂未开通
-            break;
-        }
+            // if (!l_xmlattr.uid) { //暂未开通
+            //     break;
+            // }
         for (var j = 0; j < p.length; j++) {
             var { x, y, rx, ry, lb, ex, rc, st, uid } = p[j].p_xmlattr
             if (st) {
@@ -75,12 +78,11 @@ function subwayPainter(l) {
                         image[0].href.baseVal = imgSrc;
                     }
                 } else {
-                    var ellipse = $.svg('ellipse').appendTo('#g-box')
-                    ellipse.attr({
+                    var circle = $.svg('circle').appendTo('#g-box')
+                    circle.attr({
                         cx: x,
                         cy: y,
-                        rx: "6.5",
-                        ry: "6.5"
+                        r: 4
                     }).css("stroke", "#" + l_xmlattr.lc.split("x")[1]);
                 }
                 if (!repeatStr.includes(uid)) {
