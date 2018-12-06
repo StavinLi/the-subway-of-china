@@ -52,8 +52,8 @@ function subwayPainter(l) {
         }).css("stroke", "#" + lc.split("x")[1]);
         var text = $.svg('text').appendTo('#g-box').html(lb).addSvgClass("subway-name")
         text.attr({
-            x: lbx - 10,
-            y: lby + 15,
+            x: lbx,
+            y: lby,
         }).css("fill", "#" + lc.split("x")[1]);
     }
 
