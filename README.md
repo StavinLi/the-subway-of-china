@@ -35,7 +35,7 @@
 ```
 
 ### 页面预览
-- [在线预览](https://stavinli.github.io/the-subway-of-china/dest/index.html) 点个赞吧！
+- [在线预览](http://47.106.166.17:5100) 点个赞吧！
 
 
 ### 更新记录
