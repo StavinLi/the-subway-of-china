@@ -133,7 +133,7 @@ $("head title").html($("select :selected").text() + "地铁线路图")
 var BMapSub = {}
 BMapSub._rd = {};
 var timeStamp = (Math.random() * 100000).toFixed(0);
-var checkUrl = "https://api.map.baidu.com/?qt=subways&c=" + cityCode + "&format=json&ak=yZSTYLk9UUvs0ZqXqBbtTp8ViKk5vxLM&v=3.0&from=jsapi&callback=BMapSub._rd._cbk" + timeStamp
+var checkUrl = "https://map.baidu.com/?qt=subways&c=" + cityCode + "&format=json&t=1719543589061&auth=Z5KYeUbw4ezVW6geWV3HLNPNLKvCvzB%40uxNxTHEBHTxtAFFUC7FMIAvAuxz6ZwWvcvY1SGpuBtynIfxXwvvhguVtvyheuVtvCMGuVtvCQMuVtvIPcuxtw8wkv7uvZgMuVtv%40vcuVtvc3CuVtvcPPuVtveGvuVtveh3uVtvh3CuVtvhgMuzVVtvrMhuEztHee%40ewWvegvcguxNxTHEBHRT&seckey=UAJi1M2hmiIgb3DCG%2BpZAWpF3ayiaStskj2G7q03SZQ%3D%2CjKLn5ylI6MjSmsLyuKR0KQf5pPQYBZWVdxTxGmTvC5MxSwVnDLcPqfN2kueiI-R08hu9JIhJLA3nhpbOTUzmZ4Hpqze-0uGnzoydgMSGTOaYZ13QqvA08Lvcsr5rrHSblUqVVSy8nDtJfN9bkq3MFjg3PwtHFPzLjGS_sBh24AqnXWliGcLQiB5lDQfc85bZ&pcevaname=pc4.1&newfrom=zhuzhan_webmap&callback=BMapSub._rd._cbk" + timeStamp
 $.getScript(checkUrl)
 
 BMapSub._rd["_cbk" + timeStamp] = function(json) {
